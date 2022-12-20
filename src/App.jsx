@@ -6,6 +6,7 @@ function App() {
   const [data, setData] = useState([]);
   const [selectedNumber, setSelectedNumber] = useState();
   const [selectedData, setSelectedData] = useState();
+  const [title, setTitle] = useState('Administration Officer')
 
   useEffect(() => {
     getData();
@@ -32,11 +33,11 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="row">
-          <h1>{selectedData?.role}</h1>
+          <h1>{title}</h1>
           <form action="" className="form">
             <div className="input__wrapper">
               <p>Vacancy title</p>
-              <input type="text" />
+              <input type="text" onChange={(e) => setTitle(e.target.value)} value={title}/>
             </div>
             <div className="input__wrapper">
               <p>Send CVs to</p>
