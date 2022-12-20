@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+.container{
+  padding: 40px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row{
+margin: 0 auto;
+  max-width: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row > h1{
+  font-size: 20px;
+  color: rgb(44, 105, 105);
+  margin-bottom: 160px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input__wrapper{
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.input__wrapper:not(:first-child){
+  width: 80%;
+}
+
+.input__wrapper > input,
+.input__wrapper > select,
+.input__wrapper > textarea{
+height: 40px;
+outline: none;
+border: 1px #646464 solid;
+color: #646464;
+padding: 8px;
+font-size: 17px;
+}
+
+.input__wrapper > select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 96% !important;
+}
+
+.input__wrapper > textarea{
+  height: 120px;
+  resize: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.input__wrapper > p{
+  color: #646464;
+  margin-bottom: 8px;
+}
+
+.input__checkbox{
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.input__checkbox > input{
+margin-right: 8px;
+height: 24px;
+width: 24px;
+border: 1px #646464 solid;
+}
+
+.form__button{
+  margin-top: 24px;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px rgb(52, 158, 147) solid;
+  color: rgb(52, 158, 147);
+  cursor: pointer;
+  transition: 200ms ease;
+}
+
+.form__button:hover{
+  background-color: rgb(52, 158, 147);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
